@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths:
       - ".github/workflows/generate-approved-icons.yml"
+      - ".icon-trigger"
 
 permissions:
   contents: write
