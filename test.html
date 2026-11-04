@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Test Carlitos Entrena</title>
+<style>
+body{font-family:system-ui;background:#0b0d10;color:white;padding:24px}
+button{display:block;width:100%;padding:18px;margin:12px 0;border:0;border-radius:14px;background:#b7f34a;color:#111;font-size:18px;font-weight:800}
+#status{padding:16px;border:1px solid #444;border-radius:12px;margin-top:18px}
+</style></head>
+<body>
+<h1>Test de botones</h1>
+<p>Si esto funciona, Chrome y GitHub Pages están bien.</p>
+<button id="b1">BOTÓN 1</button>
+<button id="b2">BOTÓN 2</button>
+<div id="status">Todavía no tocaste nada.</div>
+<script>
+const status=document.getElementById('status');
+document.getElementById('b1').addEventListener('click',()=>status.textContent='✅ Botón 1 funciona');
+document.getElementById('b2').addEventListener('click',()=>status.textContent='✅ Botón 2 funciona');
+</script>
+</body></html>
