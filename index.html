@@ -14,7 +14,7 @@
 :root{--bg:#0b0d10;--p:#14181e;--p2:#1b2028;--line:#2d3540;--txt:#f5f7f8;--muted:#96a0ad;--brand:#b7f34a;--good:#75dda0;--warn:#f0c36a;--bad:#ff8181}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,rgba(183,243,74,.08),transparent 28%),var(--bg);color:var(--txt);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:900px;margin:auto;padding:14px 12px 98px}.hidden{display:none!important}
-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.brand{display:flex;align-items:center;gap:9px}.logo{width:42px;height:42px;border-radius:13px;background:var(--brand);color:#10130c;display:grid;place-items:center;font-weight:950}.brand b{display:block;font-size:18px}.brand small{display:block;color:var(--muted)}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.brand{display:flex;align-items:center;gap:9px}.logo{width:42px;height:42px;border-radius:13px;background:var(--p2) center/cover no-repeat url("./icon.svg?v=15");border:1px solid var(--line);overflow:hidden}.logo span{display:none}.brand b{display:block;font-size:18px}.brand small{display:block;color:var(--muted)}
 .icon{width:40px;height:40px;border:1px solid var(--line);background:var(--p2);color:var(--txt);border-radius:12px}
 .screen{display:none}.screen.active{display:block}.hero,.card{background:rgba(20,24,30,.96);border:1px solid var(--line);border-radius:18px;padding:14px;margin-bottom:10px}.hero{background:linear-gradient(135deg,rgba(183,243,74,.10),rgba(20,24,30,.96))}
 h1{font-size:29px;letter-spacing:-.04em;margin:4px 0 6px}h2{font-size:18px;margin:0 0 8px}h3{font-size:14px;margin:0 0 6px}.sub{color:var(--muted);font-size:12px;line-height:1.45}
@@ -36,7 +36,7 @@ input,select,textarea{background:var(--p2);border:1px solid var(--line);color:va
 <body>
 <div class="toast" id="toastBox"></div>
 <div class="app">
-<header><div class="brand"><div class="logo">CE</div><div><b>Carlitos Entrena</b><small>estable · v15</small></div></div><button class="icon" id="settingsBtn">⚙</button></header>
+<header><div class="brand"><div class="logo" aria-label="Carlitos Entrena"><span>CE</span></div><div><b>Carlitos Entrena</b><small>estable · v15</small></div></div><button class="icon" id="settingsBtn">⚙</button></header>
 
 <section id="home" class="screen active">
  <div class="hero"><small class="sub">PROGRAMA FUERZA 12</small><h1>Entrená con datos.<br>Progresá con criterio.</h1><div class="sub" id="homeNext"></div><div class="row" style="margin-top:12px"><button class="btn primary" data-action="go-train">Empezar entrenamiento</button><button class="btn" data-route="program">Ver programa</button></div></div>
