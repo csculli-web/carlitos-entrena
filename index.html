@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Carlitos Entrena · v9</title>
+<title>Carlitos Entrena · v10</title>
 <link rel="manifest" href="./manifest.webmanifest">
 <meta name="theme-color" content="#0b0d10">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -393,6 +393,157 @@ textarea{width:100%;resize:vertical;min-height:72px}
 </div></div>
 
 <script>
+/* Explicit DOM bindings — v10 */
+const __dom = Object.fromEntries(Array.from(document.querySelectorAll("[id]"), el => [el.id, el]));
+const {
+  adherencePill,
+  anthroModalBack,
+  anthroModalBody,
+  anthroModalSub,
+  anthroModalTitle,
+  anthroParsePreview,
+  anthroPdfInput,
+  anthroPdfStatus,
+  anthroRecords,
+  barWeight,
+  bodyArm,
+  bodyChest,
+  bodyDate,
+  bodyFat,
+  bodyNote,
+  bodyThigh,
+  bodyWaist,
+  bodyWeight,
+  calcPlates,
+  calendar,
+  cancelAnthroImport,
+  closeAnthroModal,
+  closeSettings,
+  closeTech,
+  closeTools,
+  confirmAnthroImport,
+  consistencyChart,
+  defaultBarWeight,
+  e1rmChart,
+  e1rmExercise,
+  exerciseLibrary,
+  exerciseList,
+  exerciseNote,
+  exerciseSearch,
+  exportData,
+  finishBtn,
+  fullModeBtn,
+  fullView,
+  guidedBackBtn,
+  guidedCounter,
+  guidedDoneBtn,
+  guidedExerciseMeta,
+  guidedExerciseName,
+  guidedKg,
+  guidedLast,
+  guidedModeBtn,
+  guidedNextBox,
+  guidedReps,
+  guidedRir,
+  guidedTarget,
+  guidedTechBtn,
+  guidedType,
+  guidedView,
+  homeBodySummary,
+  homeDone,
+  homeNextText,
+  homePRs,
+  homeStreak,
+  homeTitle,
+  homeTrainBtn,
+  homeVolume,
+  homeWeek,
+  homeWeight,
+  homeWeightTrend,
+  imageSearchLink,
+  importAnthroPdfBtn,
+  importDataBtn,
+  importDataFile,
+  inspectAnthroImport,
+  installAppBtn,
+  loadMachinePhoto,
+  machinePhoto,
+  machinePhotoInput,
+  machinePhotoPlaceholder,
+  muscleBars,
+  pain,
+  plateResult,
+  plateTotal,
+  postEnergy,
+  prTable,
+  progAdherence,
+  progAvgTime,
+  progPRs,
+  progSessions,
+  progVolume,
+  programPct,
+  programProgress,
+  readinessAdvice,
+  readinessCircle,
+  readinessScore,
+  readyCervical,
+  readyCervicalVal,
+  readyEnergy,
+  readyEnergyVal,
+  readyFatigue,
+  readyFatigueVal,
+  readySleep,
+  readySleepVal,
+  removeMachinePhoto,
+  resetAll,
+  restOverlay,
+  restOverlayNext,
+  restOverlayTimer,
+  restSelect,
+  restTimer,
+  routineCards,
+  saveBodyBtn,
+  sessionClock,
+  sessionNotes,
+  sessionPicker,
+  sessionRpe,
+  sessionSubtitle,
+  sessionTimerBtn,
+  sessionTitle,
+  settingsBtn,
+  settingsModalBack,
+  skipRestBtn,
+  startDate,
+  techAvoid,
+  techCues,
+  techIdentify,
+  techModalBack,
+  techSub,
+  techTitle,
+  toast,
+  toolsBtn,
+  toolsModalBack,
+  volumeChart,
+  waistChart,
+  warmupResult,
+  weightChart,
+  youtubeLink
+} = __dom;
+function __showFatal(err){
+  try{
+    let box=document.getElementById("fatalAppError");
+    if(!box){
+      box=document.createElement("div");
+      box.id="fatalAppError";
+      box.style.cssText="position:fixed;z-index:99999;left:12px;right:12px;top:12px;padding:14px;border-radius:14px;background:#351515;color:#fff;border:1px solid #ff7e7e;font:13px/1.4 system-ui;box-shadow:0 10px 30px #0008";
+      document.body.appendChild(box);
+    }
+    box.textContent="Carlitos Entrena encontró un error al iniciar: "+(err?.message||String(err));
+  }catch(_){}
+}
+window.addEventListener("error", e=>__showFatal(e.error||e.message));
+window.addEventListener("unhandledrejection", e=>__showFatal(e.reason));
+
 function ex(name,meta,sets,min,max,rir,inc,tech){
   return {name,meta,sets,min,max,rir,inc,tech}
 }
